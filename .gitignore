@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# TensorBoard logs
+events.out.tfevents.*
+tb_logs/
+
+# System files
+.DS_Store
+
+# Local model/checkpoint files
+stage2/models/
+*.zip
+*.pt
+*.pth
+*.pkl
+
