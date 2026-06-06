@@ -88,7 +88,7 @@ def profile_clusters(sub: pd.DataFrame, labels: np.ndarray, method: str):
 def plot_clusters(sub: pd.DataFrame, labels: np.ndarray, method: str):
     sub = sub.copy()
     sub["cluster"] = labels
-    fig, axes = plt.subplots(1, 3, figsize=(16, 4))
+    fig, axes = plt.subplots(1, 2, figsize=(12, 4))
 
     for cl in sorted(sub["cluster"].unique()):
         mask = sub["cluster"] == cl
@@ -99,19 +99,13 @@ def plot_clusters(sub: pd.DataFrame, labels: np.ndarray, method: str):
             s=5, alpha=0.4, label=lbl,
         )
         axes[1].scatter(
-            sub.loc[mask, "connection_hour"],
-            sub.loc[mask, "charging_rate_kW"],
-            s=5, alpha=0.4, label=lbl,
-        )
-        axes[2].scatter(
             sub.loc[mask, "utilization_ratio"],
             sub.loc[mask, "kWhDelivered"],
             s=5, alpha=0.4, label=lbl,
         )
 
     axes[0].set(xlabel="Session Duration (min)", ylabel="kWh Delivered", title=f"{method}: Duration vs Energy")
-    axes[1].set(xlabel="Connection Hour", ylabel="Charging Rate (kW)", title=f"{method}: Hour vs Rate")
-    axes[2].set(xlabel="Utilization Ratio", ylabel="kWh Delivered", title=f"{method}: Utilization vs Energy")
+    axes[1].set(xlabel="Utilization Ratio", ylabel="kWh Delivered", title=f"{method}: Utilization vs Energy")
     for ax in axes:
         ax.legend(fontsize=7, markerscale=3)
     plt.tight_layout()
