@@ -28,7 +28,7 @@ def _get_cached_sessions(site: str) -> List[Dict[str, Any]]:
     """
     site_key = site.lower()
     if site_key not in _sessions_cache:
-        file_path = DATASET_DIR / f"{site_key}_sessions.json"
+        file_path = DATASET_DIR / f"{site_key}_sessions_full.json"
         if not file_path.exists():
             raise FileNotFoundError(f"Session file not found: {file_path}")
 

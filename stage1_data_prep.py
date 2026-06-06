@@ -17,7 +17,7 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 
 # ── helpers ──────────────────────────────────────────────────────────────────
 def _load_charging(name: str) -> pd.DataFrame:
-    path = PROJECT_ROOT / "dataset" / "charging" / f"{name}_sessions.json"
+    path = PROJECT_ROOT / "dataset" / "charging" / f"{name}_sessions_full.json"
     with path.open("r", encoding="utf-8") as fh:
         raw = json.load(fh)
     df = pd.DataFrame(raw["_items"])
