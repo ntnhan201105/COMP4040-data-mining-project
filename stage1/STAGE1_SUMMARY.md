@@ -17,7 +17,7 @@ This report presents the results of **Stage 1: Mining + Prediction** for the EV 
 
 | Property | Caltech | JPL | Combined |
 |---|---|---|---|
-| Sessions | 14,099 | 13,446 | **27,389** (after cleaning) |
+| Sessions | 23,000 | 13,446 | **36,446** (after cleaning) |
 | Date Range | Apr – Nov 2018 | Sep 2018 – Jul 2019 | Apr 2018 – Jul 2019 |
 | Unique Stations | 54 | 52 | 106 |
 | Unique Users | 175 | 313 | 488 |
