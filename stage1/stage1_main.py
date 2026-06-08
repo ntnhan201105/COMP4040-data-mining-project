@@ -46,10 +46,10 @@ def main():
     run_association(df)
 
     # Part 5: Prediction
-    # run_prediction(df)
+    run_prediction(df)
 
     # Part 6: LSTM
-    # run_lstm(df)
+    run_lstm(df)
 
     elapsed = time.time() - t0
     print("\n" + "=" * 60)
