@@ -319,7 +319,7 @@ self.action_space = spaces.Box(
 Each element $a_i \in [0, 1]$ represents the **normalized charging rate** for station $i$. The mapping from normalized action to physical pilot signal is:
 
 $$
-\mathrm{target\_rate}_{i} = a_{i} \cdot \mathrm{max\_pilot\_signal}_{i}
+r_i^{\text{target}} = a_i \cdot s_i^{\text{max}}
 $$
 
 This target rate is then projected to the **nearest allowable rate** for that station:
